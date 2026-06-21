@@ -1,0 +1,52 @@
+🧠 Why This Is Important
+Normally:
+Producer
+   ↓
+Consumer
+
+But what if processing fails?
+Producer
+   ↓
+Queue
+   ↓
+Consumer
+   ↓
+❌ Failure
+
+Using retries and a Dead Letter Queue:
+Queue
+ ↓
+Consumer
+ ↓
+Retry 1
+ ↓
+Retry 2
+ ↓
+Retry 3
+ ↓
+Dead Letter Queue
+
+Failed messages are preserved instead of being lost.
+
+Used By
+	•	RabbitMQ
+	•	Apache Kafka
+	•	AWS SQS
+	•	Celery
+
+⸻
+
+🛠 Tech Stack
+	•	Python
+	•	Flask
+	•	Queue
+	•	Random
+	•	Threading
+
+⸻
+
+📂 Project Structure
+retry-dlq-system/
+│
+├── app.py
+└── README.md
